@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Find Outer-Width and Outer-Height of an Element</title>
+<style>
+    #element{
+        width: 350px;
+        height: 150px;
+        padding: 30px;
+        text-align: justify;
+        border: 10px solid;
+        background: pink;
+        margin: 10px;
+    }        
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        var Width = $("#element").outerWidth();
+        var Height = $("#element").outerHeight();
+        $("#result").html("Outer Width: " + Width + ", " + "Outer Height: " + Height);
+    });
+});
+</script>
+</head> 
+<body>
+    <div id="element">the content here belongs to the element.</div>
+    <button type="button">Get outerWidth and outerHeight</button>
+    <p id="result"></p>	
+   </body>
+</html>
